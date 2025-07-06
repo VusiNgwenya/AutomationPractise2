@@ -1,0 +1,14 @@
+
+class ScrollUtil:
+    @staticmethod
+    def scrollToTextByAndroidUIAutomator(text,driver):
+        driver.find_element_by_android_uiautomator("new UiScrollable(),scroll"
+                                                   "0)).scrollIntoView(new UiSelector().toLeft()")
+
+    @staticmethod
+    def swipeUp(howManySwipes,driver):
+        for i in range(1,howManySwipes+1):
+            driver.swipe(514,600,514,200,1800)
+
+    def test_searchVillas(appium_driver):
+        driver = appium_driver
